@@ -12,6 +12,14 @@ body {
   border-radius: 8px;
 }
 
+.statistics {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .registration-form, .filters, .applicants-list {
   background-color: white;
   padding: 20px;
@@ -29,6 +37,27 @@ form {
 input, select, button {
   padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.applicants-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
 }
 
 .applicant-card {
@@ -37,6 +66,11 @@ input, select, button {
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.applicant-card:last-child {
+  border-bottom: none;
 }
 
 .applicant-card .delete-btn {
@@ -45,25 +79,21 @@ input, select, button {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.applicant-card {
+.applicant-card .delete-btn:hover {
+  background-color: #d9534f;
+}
+
+.filters {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.delete-btn {
-  background-color: rgba(255, 0, 0, 0.603); 
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.delete-btn:hover {
-  background-color: darkred;
+#faculty-filter, #search-input {
+  flex: 1;
+  min-width: 200px;
 }

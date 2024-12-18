@@ -1,12 +1,15 @@
-<html lang="ru"></html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Степанов 4311-21</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система Управления Абитуриентами</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Приемная комиссия</h1>
+        
         <div class="statistics">
             <h2>Статистика</h2>
             <div class="stats-block">
@@ -17,16 +20,16 @@
         <div class="registration-form">
             <h2>Регистрация абитуриента</h2>
             <form id="applicant-form">
-                <input type="text" id="fullname" placeholder="ФИО" >
-                <input type="email" id="email" placeholder="Email" >
-                <input type="tel" id="phone" placeholder="Телефон" >
+                <input type="text" id="fullname" placeholder="ФИО" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Телефон" required>
                 
                 <select id="faculty" required>
                     <option value="">Выберите факультет</option>
-                    <option value="Информационных технологий">Информационных технологий</option>
-                    <option value="Экономический">Экономический</option>
-                    <option value="Медицинский">Медицинский</option>
-                    <option value="Гуманитарный">Гуманитарный</option>
+                    <option value="IT">Информационных технологий</option>
+                    <option value="ECONOMICS">Экономический</option>
+                    <option value="MEDICINE">Медицинский</option>
+                    <option value="HUMANITIES">Гуманитарный</option>
                 </select>
 
                 <button type="submit">Зарегистрировать</button>
@@ -37,12 +40,12 @@
             <h2>Фильтры</h2>
             <select id="faculty-filter">
                 <option value="">Все факультеты</option>
-                <option value="Информационных технологий">Информационных технологий</option>
-                <option value="Экономический">Экономический</option>
-                <option value="Медицинский">Медицинский</option>
-                <option value="Гуманитарный">Гуманитарный</option>
+                <option value="IT">Информационных технологий</option>
+                <option value="ECONOMICS">Экономический</option>
+                <option value="MEDICINE">Медицинский</option>
+                <option value="HUMANITIES">Гуманитарный</option>
             </select>
-            <input type="text" id="search-input" placeholder="Поиск по ФИО">
+            <input type="text" id="fullname-filter" placeholder="Поиск по ФИО">
         </div>
 
         <div class="applicants-list">
@@ -50,10 +53,10 @@
             <div id="applicants-container"></div>
         </div>
 
-        <script type="module" src="app.js"></script>
-
     </div>
 
+    <script src="main.js"></script>
+    <script type="module" src="app.js"></script>
 
 </body>
 </html>
